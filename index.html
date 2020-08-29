@@ -1,0 +1,74 @@
+<html>
+<title>Graphia</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="graph.css" type="text/css">
+<link rel="stylesheet" href="interface.css" type="text/css">
+<script type="text/javascript" src="graph.js"></script>
+<script type="text/javascript" src="interface.js"></script>
+</head>
+<body>
+<h1>Graphia</h1>
+<div id="Error"></div>
+<canvas id="Graph" width="600" height="600"></canvas>
+
+<div id="panel">
+<p>グラフの範囲</p>
+	<input id="xS" value="-10"> ≦ x ≦ <input id="xE" value="10"><br>
+	<input id="yS" value="-10"> ≦ f(x) ≦ <input id="yE" value="10"><br>
+<p>式</p>
+f(x) = <input id="formula" value="Math.sqrt(x)">
+	<input id="draw" value="Plot" type="button" />
+	<input id="erase" value="Erase" type="button">
+	<a href="#" id='imgSave' download="Graphia.png">ダウンロード</a>
+
+<p>入力補助</p>
+	<a class="site" onmouseover="A1(1)">数字/四則</a>
+	<a class="site" onmouseover="A1(2)">三角関数</a>
+	<a class="site" onmouseover="A1(4)">指数対数</a>
+	<a class="site" onmouseover="A1(8)">端数処理</a>
+
+<div id="1" class="Clear">
+	<a class="komo" onclick="D(2,1)">e</a>
+	<a class="komo" onclick="D(2,2)">π</a>
+	<a class="komo" onclick="D(2,3)">x</a>
+	<a class="komo" onclick="D(2,4)">.</a>
+	<a class="komo" onclick="D(4,1)">+</a>
+	<a class="komo" onclick="D(4,2)">-</a>
+	<a class="komo" onclick="D(4,3)">*</a>
+	<a class="komo" onclick="D(4,4)">/</a>
+	<a class="komo" onclick="D(0,0)">0</a>
+	<a class="komo" onclick="D(0,1)">1</a>
+	<a class="komo" onclick="D(0,2)">2</a>
+	<a class="komo" onclick="D(0,3)">3</a>
+	<a class="komo" onclick="D(0,4)">4</a>
+	<a class="komo" onclick="D(0,5)">5</a>
+	<a class="komo" onclick="D(0,6)">6</a>
+	<a class="komo" onclick="D(0,7)">7</a>
+	<a class="komo" onclick="D(0,8)">8</a>
+	<a class="komo" onclick="D(0,9)">9</a>
+</div>
+<div id="2" class="Clear">
+	<a class="komo" onclick="D(3,1)">sin</a>
+	<a class="komo" onclick="D(3,2)">cos</a>
+	<a class="komo" onclick="D(3,3)">tan</a>
+	<a class="komo" onclick="D(3,4)">arcsin</a>
+	<a class="komo" onclick="D(3,5)">arccos</a>
+	<a class="komo" onclick="D(3,6)">arctan</a>
+</div>
+<div id="4" class="Clear">
+	<a class="komo" onclick="D(5,1)">√</a>
+	<a class="komo" onclick="D(5,2)">pow</a>
+	<a class="komo" onclick="D(5,3)">exp</a>
+	<a class="komo" onclick="D(5,4)">log</a>
+</div>
+<div id="8" class="Clear">
+	<a class="komo" onclick="D(7,0)">四捨五入</a>
+	<a class="komo" onclick="D(7,1)">切り上げ</a>
+	<a class="komo" onclick="D(7,2)">切り捨て</a>
+</div>
+
+</div>
+
+</body></html>
